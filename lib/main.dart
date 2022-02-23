@@ -164,7 +164,7 @@ void callbackDispatcher() {
     WidgetsFlutterBinding.ensureInitialized();
     await SignalRHelper.init();
     await LocalNotificationHelper.init();
-    
+
     /// hi Mohamed
     /// mohamed shaaban
     await SignalRHelper.connectionOn();
