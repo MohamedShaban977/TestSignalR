@@ -159,6 +159,8 @@ Future<void> onStart() async {
     service.sendData({"id":"123","header":"hi Mohamed","content":"hi Mohamed hi Mohamed"});
   });
 }*/
+
+/// callbackDispatcher Method
 void callbackDispatcher() {
   Workmanager().executeTask((taskName, inputData) async {
     WidgetsFlutterBinding.ensureInitialized();
