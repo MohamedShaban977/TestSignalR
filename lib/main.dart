@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:test_signalr_flutter/local_notifacation_helper.dart';
 import 'package:workmanager/workmanager.dart';
 import 'signalR_real_time.dart';
-
 /*
 main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -82,19 +81,14 @@ class SecondPage extends StatelessWidget {
 }
 
 */
-
 ///=======================================================
-
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   // await SignalRHelper.init();
   // await LocalNotificationHelper.init();
-
   await
 /*  await initializeService();
   FlutterBackgroundService().sendData({"action": "setAsBackground"});*/
-
-
   Workmanager().registerOneOffTask("uniqueName", "taskName",
       initialDelay: Duration(seconds: 10), inputData: {"hi": "${Random().nextInt(1000)}"});
   Workmanager().registerPeriodicTask("uniqueName1", "taskName1",frequency:Duration(seconds: 10) );
@@ -160,7 +154,6 @@ Future<void> onStart() async {
     service.sendData({"id":"123","header":"hi Mohamed","content":"hi Mohamed hi Mohamed"});
   });
 }*/
-
 void callbackDispatcher() {
   Workmanager().executeTask((taskName, inputData) async {
     WidgetsFlutterBinding.ensureInitialized();
@@ -174,14 +167,12 @@ void callbackDispatcher() {
     return Future.value(true);
   });
 }
-
 class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
 
   @override
   _MyAppState createState() => _MyAppState();
 }
-
 class _MyAppState extends State<MyApp> {
   String text = "Stop Service";
 
