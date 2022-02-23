@@ -154,7 +154,6 @@ Future<void> onStart() async {
     service.sendData({"id":"123","header":"hi Mohamed","content":"hi Mohamed hi Mohamed"});
   });
 }*/
-
 void callbackDispatcher() {
   Workmanager().executeTask((taskName, inputData) async {
     WidgetsFlutterBinding.ensureInitialized();
@@ -166,14 +165,12 @@ void callbackDispatcher() {
     return Future.value(true);
   });
 }
-
 class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
 
   @override
   _MyAppState createState() => _MyAppState();
 }
-
 class _MyAppState extends State<MyApp> {
   String text = "Stop Service";
 
